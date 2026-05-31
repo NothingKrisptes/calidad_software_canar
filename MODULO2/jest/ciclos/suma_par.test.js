@@ -1,8 +1,8 @@
 const { sumatoria_mayor_100 } = require('./sumatoria_mayor_100');
 
 describe('sumatoria_mayor_100',()=>{
-    test('Happy path: numeros=[50,50,5]=>true', ()=>{
-        expect(sumatoria_mayor_100([50,50,5])).toBe(true)
+    test('Happy path: numeros=[50,50,50]=>true', ()=>{
+        expect(sumatoria_mayor_100([50,50,50])).toBe(true)
     })
     test('Happy path: numeros=[6,6,6]=>false', ()=>{
         expect(sumatoria_mayor_100([6,6,6])).toBe(false)
