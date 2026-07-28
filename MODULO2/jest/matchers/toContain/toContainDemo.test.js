@@ -5,21 +5,15 @@ describe('toContain matcher', () => {
         expect(frutas).toContain('pera');
     });
 
-
-
     test('Happy path: palabra dentro de texto', () => {
         expect(contienePalabra('Jest es increíble', 'increíble')).toBe(true);
     });
-
-
 
     test('Sad path: elemento no encontrado o tipo incorrecto', () => {
         const frutas = obtenerFrutas();
         expect(frutas).not.toContain('banana');
         expect(() => contienePalabra(123, 'texto')).toThrow('Ambos argumentos deben ser strings');
     });
-
-
 
     test('Sad path: agregarElemento con valores inválidos', () => {
         expect(() => agregarElemento({}, 'x')).toThrow('lista debe ser un array');
